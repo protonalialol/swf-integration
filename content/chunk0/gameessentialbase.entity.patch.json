@@ -86,7 +86,7 @@
 				"ff4672d7da2e8b02",
 				{
 					"AddProperty": [
-						"RatingBar",
+						"HealthBar",
 						{
 							"type": "SEntityTemplateReference",
 							"value": "cafef4e298a79304"
@@ -100,7 +100,7 @@
 				"ff4672d7da2e8b02",
 				{
 					"AddPropertyAliasConnection": [
-						"RatingBar",
+						"HealthBar",
 						{
 							"originalProperty": "m_pTargetControl",
 							"originalEntity": "cafe353bf2365fa9"
@@ -114,7 +114,7 @@
 				"cafeba446945a84b",
 				{
 					"parent": "6933599ccecbd1ed",
-					"name": "RatingBar",
+					"name": "HealthBar",
 					"factory": "[modules:/zentity.class].pc_entitytype",
 					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 				}
@@ -125,24 +125,28 @@
 				"cafef77f80f5f691",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "RatingBar",
-					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
-					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
+					"name": "HealthBar",
+					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
+					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
 					"properties": {
 						"m_pMovieResource": {
 							"type": "ZRuntimeResourceID",
 							"value": {
-								"resource": "[assembly:/ui/controls/RatingBar.swf].pc_swf",
+								"resource": "[assembly:/ui/controls/HealthBar.swf].pc_swf",
 								"flag": "5F"
 							}
 						},
 						"m_sClassName": {
 							"type": "ZString",
-							"value": "ratingbar.RatingBar"
+							"value": "healthbar.HealthBar"
 						},
 						"m_vPositionOffset": {
 							"type": "SVector3",
-							"value": { "x": 15, "y": 700, "z": 0 }
+							"value": {
+								"x": 15,
+								"y": 700,
+								"z": 0
+							}
 						},
 						"m_eAlignmentType": {
 							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
@@ -154,14 +158,35 @@
 						},
 						"m_vSize": {
 							"type": "SVector2",
-							"value": { "x": 100, "y": 100 }
+							"value": {
+								"x": 100,
+								"y": 100
+							}
 						},
-						"m_bIsVisible": { "type": "bool", "value": true },
-						"m_fAlpha": { "type": "float32", "value": 100.0 },
-						"Debug": { "type": "uint32", "value": 100 },
-						"DebugMode": { "type": "bool", "value": false },
-						"Height": { "type": "float32", "value": 1 },
-						"Width": { "type": "float32", "value": 1 }
+						"m_bIsVisible": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fAlpha": {
+							"type": "float32",
+							"value": 100.0
+						},
+						"Debug": {
+							"type": "uint32",
+							"value": 100
+						},
+						"DebugMode": {
+							"type": "bool",
+							"value": false
+						},
+						"Height": {
+							"type": "float32",
+							"value": 1
+						},
+						"Width": {
+							"type": "float32",
+							"value": 1
+						}
 					},
 					"events": {
 						"RequestData": {
@@ -217,15 +242,22 @@
 					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entityblueprint",
 					"properties": {
-						"m_bEnabled": { "type": "bool", "value": true },
+						"m_bEnabled": {
+							"type": "bool",
+							"value": true
+						},
 						"m_rChannelToken": {
 							"type": "SEntityTemplateReference",
 							"value": "cafe8b035c1e15db"
 						}
 					},
 					"events": {
-						"OnTrue": { "Hide": ["cafe353bf2365fa9"] },
-						"OnFalse": { "Show": ["cafe353bf2365fa9"] }
+						"OnTrue": {
+							"Hide": ["cafe353bf2365fa9"]
+						},
+						"OnFalse": {
+							"Show": ["cafe353bf2365fa9"]
+						}
 					}
 				}
 			]
@@ -252,11 +284,14 @@
 				"cafe353bf2365fa9",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "RatingBarVisibilityController_Instant",
+					"name": "HealthBarVisibilityController_Instant",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": { "type": "float32", "value": 0 },
+						"m_fFadeTime": {
+							"type": "float32",
+							"value": 0
+						},
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -270,11 +305,14 @@
 				"cafe0141885e38a0",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "RatingBarVisibilityController_Fade",
+					"name": "HealthBarVisibilityController_Fade",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": { "type": "float32", "value": 1 },
+						"m_fFadeTime": {
+							"type": "float32",
+							"value": 1
+						},
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -288,7 +326,7 @@
 				"cafef4e298a79304",
 				{
 					"parent": "ff4672d7da2e8b02",
-					"name": "RatingBar",
+					"name": "HealthBar",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
@@ -311,11 +349,13 @@
 					"properties": {
 						"m_pJSONResource": {
 							"type": "ZRuntimeResourceID",
-							"value": "[assembly:/ui/data/ratingbar/colours_main.json].pc_json"
+							"value": "[assembly:/ui/data/healthbar/colours_main.json].pc_json"
 						}
 					},
 					"events": {
-						"Data": { "MainColours": ["cafef77f80f5f691"] }
+						"Data": {
+							"MainColours": ["cafef77f80f5f691"]
+						}
 					}
 				}
 			]
@@ -331,7 +371,7 @@
 					"properties": {
 						"m_pJSONResource": {
 							"type": "ZRuntimeResourceID",
-							"value": "[assembly:/ui/data/ratingbar/colours_secondary.json].pc_json"
+							"value": "[assembly:/ui/data/healthbar/colours_secondary.json].pc_json"
 						}
 					},
 					"events": {

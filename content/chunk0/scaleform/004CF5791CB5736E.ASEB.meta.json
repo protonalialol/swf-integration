@@ -10,7 +10,7 @@
 	"hash_size_in_video_memory": 4294967295,
 	"hash_reference_data": [
 		{
-			"hash": "[assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].pc_entityblueprint",
+			"hash": "[assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].pc_entityblueprint",
 			"flag": "1F"
 		},
 		{

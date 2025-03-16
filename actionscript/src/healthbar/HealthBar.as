@@ -1,4 +1,4 @@
-package ratingbar
+package healthbar
 {
 	import common.BaseControl;
 
@@ -11,13 +11,13 @@ package ratingbar
 
 	import scaleform.gfx.Extensions;
 
-	public class RatingBar extends BaseControl
+	public class HealthBar extends BaseControl
 	{
 
-		private var m_RatingBarView:HealthBarView = new HealthBarView();
-		private var m_RatingBarColourTransform:ColorTransform = new ColorTransform();
+		private var m_HealthBarView:HealthBarView = new HealthBarView();
+		private var m_HealthBarColourTransform:ColorTransform = new ColorTransform();
 		private var m_infectedColourTransform:ColorTransform = new ColorTransform();
-		private var m_currentRatingBar:Number;
+		private var m_currentHealthBar:Number;
 		private var m_isInfected:Boolean = false;
 		private var m_lowHealthColour:uint;
 		private var m_mediumHealthColour:uint;
@@ -33,9 +33,9 @@ package ratingbar
 
 		private var m_debugTextField:TextField;
 
-		public function RatingBar()
+		public function HealthBar()
 		{
-			Extensions.setEdgeAAMode(m_RatingBarView, Extensions.EDGEAA_OFF);
+			Extensions.setEdgeAAMode(m_HealthBarView, Extensions.EDGEAA_OFF);
 
 			m_debugTextField = new TextField();
 			m_debugTextField.visible = false;
@@ -54,7 +54,7 @@ package ratingbar
 
 			WaitForCallEntity();
 
-			addChild(m_RatingBarView);
+			addChild(m_HealthBarView);
 			addChild(m_debugTextField);
 		}
 
@@ -87,29 +87,29 @@ package ratingbar
 			FullHealthColour = object.MainColours.FullHealthColour;
 			InfectedColour = object.MainColours.InfectedColour;
 			m_mediumHealthRatio = object.MainColours.MediumHealthRatio;
-			UpdateRatingBarColour();
+			UpdateHealthBarColour();
 			mainColoursObjectDebug = object.MainColours;
 		}
 
 		public function SecondaryColours(object:Object):void
 		{
-			RatingBarTextColour = object.SecondaryColours.RatingBarTextColour;
-			RatingBarTextBGColour = object.SecondaryColours.RatingBarTextBGColour;
-			RatingBarTextBorderColour = object.SecondaryColours.RatingBarTextBorderColour;
-			RatingBarBGColour = object.SecondaryColours.RatingBarBGColour;
-			RatingBarBorderColour = object.SecondaryColours.RatingBarBorderColour;
+			HealthBarTextColour = object.SecondaryColours.HealthBarTextColour;
+			HealthBarTextBGColour = object.SecondaryColours.HealthBarTextBGColour;
+			HealthBarTextBorderColour = object.SecondaryColours.HealthBarTextBorderColour;
+			HealthBarBGColour = object.SecondaryColours.HealthBarBGColour;
+			HealthBarBorderColour = object.SecondaryColours.HealthBarBorderColour;
 			secondaryColoursObjectDebug = object.SecondaryColours;
 		}
 
 		public function SetBarHealth(health:Number):void
 		{
-			m_currentRatingBar = health;
+			m_currentHealthBar = health;
 			UpdateHealth();
 		}
 
 		public function SetTextHealth(health:Number):void
 		{
-			m_RatingBarView.RatingBarText.text = String(Math.round(health));
+			m_HealthBarView.HealthBarText.text = String(Math.round(health));
 		}
 
 		public function SetInfected(isInfected:Boolean):void
@@ -118,32 +118,32 @@ package ratingbar
 
 			if (isInfected)
 			{
-				m_RatingBarView.RatingBarInner.gotoAndPlay(2);
+				m_HealthBarView.HealthBarInner.gotoAndPlay(2);
 			}
 			else
 			{
-				m_RatingBarView.RatingBarInner.gotoAndPlay(1);
+				m_HealthBarView.HealthBarInner.gotoAndPlay(1);
 			}
 
-			UpdateRatingBarColour();
+			UpdateHealthBarColour();
 		}
 
 		private function UpdateHealth():void
 		{
-			m_RatingBarView.RatingBarInner.scaleY = m_currentRatingBar;
-			UpdateRatingBarColour();
+			m_HealthBarView.HealthBarInner.scaleY = m_currentHealthBar;
+			UpdateHealthBarColour();
 		}
 
-		private function UpdateRatingBarColour():void
+		private function UpdateHealthBarColour():void
 		{
 			if (m_isInfected)
 			{
 				m_infectedColourTransform.color = m_infectedColour;
-				m_RatingBarView.RatingBarInner.transform.colorTransform = m_infectedColourTransform;
+				m_HealthBarView.HealthBarInner.transform.colorTransform = m_infectedColourTransform;
 				return;
 			}
 
-			var healthRatio:Number = m_currentRatingBar;
+			var healthRatio:Number = m_currentHealthBar;
 
 			var low:uint, medium:uint, full:uint;
 
@@ -162,8 +162,8 @@ package ratingbar
 				medium = interpolate(m_mediumHealthColour & 0xFF, m_fullHealthColour & 0xFF, middleToFullRatio);
 			}
 
-			m_RatingBarColourTransform.color = (low << 16) | (full << 8) | medium;
-			m_RatingBarView.RatingBarInner.transform.colorTransform = m_RatingBarColourTransform;
+			m_HealthBarColourTransform.color = (low << 16) | (full << 8) | medium;
+			m_HealthBarView.HealthBarInner.transform.colorTransform = m_HealthBarColourTransform;
 		}
 
 		private function interpolate(start:uint, end:uint, ratio:Number):uint
@@ -183,42 +183,42 @@ package ratingbar
 			return colourValue;
 		}
 
-		private function set RatingBarTextColour(colour:String):void
+		private function set HealthBarTextColour(colour:String):void
 		{
 			var colourValue:uint = parseRGB(colour);
-			m_RatingBarView.RatingBarText.textColor = colourValue;
+			m_HealthBarView.HealthBarText.textColor = colourValue;
 		}
 
-		private function set RatingBarTextBGColour(colour:String):void
+		private function set HealthBarTextBGColour(colour:String):void
 		{
 			var colourValue:uint = parseRGB(colour);
 			var colorTransform:ColorTransform = new ColorTransform();
 			colorTransform.color = colourValue;
-			m_RatingBarView.RatingBarTextBG.transform.colorTransform = colorTransform;
+			m_HealthBarView.HealthBarTextBG.transform.colorTransform = colorTransform;
 		}
 
-		private function set RatingBarTextBorderColour(colour:String):void
+		private function set HealthBarTextBorderColour(colour:String):void
 		{
 			var colourValue:uint = parseRGB(colour);
 			var colorTransform:ColorTransform = new ColorTransform();
 			colorTransform.color = colourValue;
-			m_RatingBarView.RatingBarTextBorder.transform.colorTransform = colorTransform;
+			m_HealthBarView.HealthBarTextBorder.transform.colorTransform = colorTransform;
 		}
 
-		private function set RatingBarBGColour(colour:String):void
+		private function set HealthBarBGColour(colour:String):void
 		{
 			var colourValue:uint = parseRGB(colour);
 			var colorTransform:ColorTransform = new ColorTransform();
 			colorTransform.color = colourValue;
-			m_RatingBarView.RatingBarBG.transform.colorTransform = colorTransform;
+			m_HealthBarView.HealthBarBG.transform.colorTransform = colorTransform;
 		}
 
-		private function set RatingBarBorderColour(colour:String):void
+		private function set HealthBarBorderColour(colour:String):void
 		{
 			var colourValue:uint = parseRGB(colour);
 			var colorTransform:ColorTransform = new ColorTransform();
 			colorTransform.color = colourValue;
-			m_RatingBarView.RatingBarBorder.transform.colorTransform = colorTransform;
+			m_HealthBarView.HealthBarBorder.transform.colorTransform = colorTransform;
 		}
 
 		private function set LowHealthColour(colour:String):void
@@ -261,18 +261,18 @@ package ratingbar
 
 		public function set Height(number:Number):void
 		{
-			m_RatingBarView.scaleY = number;
+			m_HealthBarView.scaleY = number;
 		}
 
 		public function set Width(number:Number):void
 		{
-			m_RatingBarView.scaleX = number;
+			m_HealthBarView.scaleX = number;
 		}
 
 		private function UpdateDebugText(e:Event):void
 		{
 			var debugInfo:String = "";
-			debugInfo += "Current Health: " + m_RatingBarView.RatingBarText.text + "\n";
+			debugInfo += "Current Health: " + m_HealthBarView.HealthBarText.text + "\n";
 			debugInfo += "Is Infected: " + m_isInfected + "\n";
 			if (mainColoursObjectDebug != null)
 			{
@@ -293,20 +293,20 @@ package ratingbar
 			if (secondaryColoursObjectDebug != null)
 			{
 				debugInfo += "Secondary colours:\n";
-				debugInfo += "\tRatingBarTextColour: " + secondaryColoursObjectDebug.RatingBarTextColour + "\n";
-				debugInfo += "\tRatingBarTextBGColour: " + secondaryColoursObjectDebug.RatingBarTextBGColour + "\n";
-				debugInfo += "\tRatingBarTextBorderColour: " + secondaryColoursObjectDebug.RatingBarTextBorderColour + "\n";
-				debugInfo += "\tRatingBarBGColour: " + secondaryColoursObjectDebug.RatingBarBGColour + "\n";
-				debugInfo += "\tRatingBarBorderColour: " + secondaryColoursObjectDebug.RatingBarBorderColour + "\n";
+				debugInfo += "\tHealthBarTextColour: " + secondaryColoursObjectDebug.HealthBarTextColour + "\n";
+				debugInfo += "\tHealthBarTextBGColour: " + secondaryColoursObjectDebug.HealthBarTextBGColour + "\n";
+				debugInfo += "\tHealthBarTextBorderColour: " + secondaryColoursObjectDebug.HealthBarTextBorderColour + "\n";
+				debugInfo += "\tHealthBarBGColour: " + secondaryColoursObjectDebug.HealthBarBGColour + "\n";
+				debugInfo += "\tHealthBarBorderColour: " + secondaryColoursObjectDebug.HealthBarBorderColour + "\n";
 			}
 			else
 			{
 				debugInfo += "Secondary colours:\n";
-				debugInfo += "\tRatingBarTextColour: \n";
-				debugInfo += "\tRatingBarTextBGColour: \n";
-				debugInfo += "\tRatingBarTextBorderColour: \n";
-				debugInfo += "\tRatingBarBGColour: \n";
-				debugInfo += "\tRatingBarBorderColour: \n";
+				debugInfo += "\tHealthBarTextColour: \n";
+				debugInfo += "\tHealthBarTextBGColour: \n";
+				debugInfo += "\tHealthBarTextBorderColour: \n";
+				debugInfo += "\tHealthBarBGColour: \n";
+				debugInfo += "\tHealthBarBorderColour: \n";
 			}
 
 			m_debugTextField.text = debugInfo;

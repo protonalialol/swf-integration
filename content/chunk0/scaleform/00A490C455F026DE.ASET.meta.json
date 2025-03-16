@@ -10,7 +10,7 @@
 	"hash_size_in_video_memory": 4294967295,
 	"hash_reference_data": [
 		{
-			"hash": "[assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].pc_entitytype",
+			"hash": "[assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].pc_entitytype",
 			"flag": "1F"
 		},
 		{
@@ -18,7 +18,7 @@
 			"flag": "1F"
 		},
 		{
-			"hash": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
+			"hash": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
 			"flag": "1F"
 		}
 	]
