@@ -1,10 +1,11 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"id": "meimei.swfintegration",
 	"name": "SWF Testing",
 	"description": "SWF Integration Testing",
 	"authors": ["Mei-Mei"],
 	"contentFolders": ["content"],
-	"frameworkVersion": "2.25.1"
+	"frameworkVersion": "2.33.23",
+	"updateCheck": "https://github.com/protonalialol/swf-integration/releases/latest/download/updates.json"
 }
