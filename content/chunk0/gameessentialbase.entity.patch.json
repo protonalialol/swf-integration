@@ -6,7 +6,13 @@
 			"SubEntityOperation": [
 				"22d3b3245663530a",
 				{
-					"AddProperty": ["m_bValue", { "type": "bool", "value": false }]
+					"AddProperty": [
+						"m_bValue",
+						{
+							"type": "bool",
+							"value": false
+						}
+					]
 				}
 			]
 		},
@@ -16,7 +22,10 @@
 				{
 					"SetPropertyValue": {
 						"property_name": "m_vSize",
-						"value": { "x": 110.0, "y": 100.0 }
+						"value": {
+							"x": 110.0,
+							"y": 100.0
+						}
 					}
 				}
 			]
@@ -83,7 +92,13 @@
 			"SubEntityOperation": [
 				"24510c06d411d27e",
 				{
-					"AddProperty": ["m_bValue", { "type": "bool", "value": false }]
+					"AddProperty": [
+						"m_bValue",
+						{
+							"type": "bool",
+							"value": false
+						}
+					]
 				}
 			]
 		},
@@ -110,7 +125,13 @@
 			"SubEntityOperation": [
 				"0e6b987334fb32d8",
 				{
-					"AddProperty": ["m_bIsVisible", { "type": "bool", "value": true }]
+					"AddProperty": [
+						"m_bIsVisible",
+						{
+							"type": "bool",
+							"value": true
+						}
+					]
 				}
 			]
 		},
@@ -118,7 +139,13 @@
 			"SubEntityOperation": [
 				"0e6b987334fb32d8",
 				{
-					"AddProperty": ["m_fAlpha", { "type": "float32", "value": 100.0 }]
+					"AddProperty": [
+						"m_fAlpha",
+						{
+							"type": "float32",
+							"value": 100.0
+						}
+					]
 				}
 			]
 		},
@@ -130,7 +157,11 @@
 						"m_vPositionOffset",
 						{
 							"type": "SVector3",
-							"value": { "x": 0.0, "y": -10.0, "z": 0.0 }
+							"value": {
+								"x": 0.0,
+								"y": -10.0,
+								"z": 0.0
+							}
 						}
 					]
 				}
@@ -140,7 +171,13 @@
 			"SubEntityOperation": [
 				"0e6b987334fb32d8",
 				{
-					"AddProperty": ["m_bForwardDataToChildren", { "type": "bool", "value": false }]
+					"AddProperty": [
+						"m_bForwardDataToChildren",
+						{
+							"type": "bool",
+							"value": false
+						}
+					]
 				}
 			]
 		},
@@ -175,7 +212,13 @@
 			"SubEntityOperation": [
 				"ff4d314f742afb4a",
 				{
-					"AddProperty": ["m_bValue", { "type": "bool", "value": false }]
+					"AddProperty": [
+						"m_bValue",
+						{
+							"type": "bool",
+							"value": false
+						}
+					]
 				}
 			]
 		},
@@ -183,7 +226,13 @@
 			"SubEntityOperation": [
 				"1540a46df9c4cdb9",
 				{
-					"AddProperty": ["m_bIsVisible", { "type": "bool", "value": false }]
+					"AddProperty": [
+						"m_bIsVisible",
+						{
+							"type": "bool",
+							"value": false
+						}
+					]
 				}
 			]
 		},
@@ -256,7 +305,11 @@
 						},
 						"m_vPositionOffset": {
 							"type": "SVector3",
-							"value": { "x": 15, "y": 700, "z": 0 }
+							"value": {
+								"x": 15,
+								"y": 700,
+								"z": 0
+							}
 						},
 						"m_eAlignmentType": {
 							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
@@ -268,14 +321,35 @@
 						},
 						"m_vSize": {
 							"type": "SVector2",
-							"value": { "x": 100, "y": 100 }
+							"value": {
+								"x": 100,
+								"y": 100
+							}
 						},
-						"m_bIsVisible": { "type": "bool", "value": true },
-						"m_fAlpha": { "type": "float32", "value": 100.0 },
-						"Debug": { "type": "uint32", "value": 100 },
-						"DebugMode": { "type": "bool", "value": false },
-						"Height": { "type": "float32", "value": 1 },
-						"Width": { "type": "float32", "value": 1 }
+						"m_bIsVisible": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fAlpha": {
+							"type": "float32",
+							"value": 100.0
+						},
+						"Debug": {
+							"type": "uint32",
+							"value": 100
+						},
+						"DebugMode": {
+							"type": "bool",
+							"value": false
+						},
+						"Height": {
+							"type": "float32",
+							"value": 1
+						},
+						"Width": {
+							"type": "float32",
+							"value": 1
+						}
 					},
 					"events": {
 						"RequestData": {
@@ -331,15 +405,22 @@
 					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entityblueprint",
 					"properties": {
-						"m_bEnabled": { "type": "bool", "value": true },
+						"m_bEnabled": {
+							"type": "bool",
+							"value": true
+						},
 						"m_rChannelToken": {
 							"type": "SEntityTemplateReference",
 							"value": "cafe8b035c1e15db"
 						}
 					},
 					"events": {
-						"OnTrue": { "Hide": ["cafe353bf2365fa9"] },
-						"OnFalse": { "Show": ["cafe353bf2365fa9"] }
+						"OnTrue": {
+							"Hide": ["cafe353bf2365fa9"]
+						},
+						"OnFalse": {
+							"Show": ["cafe353bf2365fa9"]
+						}
 					}
 				}
 			]
@@ -370,7 +451,10 @@
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": { "type": "float32", "value": 0 },
+						"m_fFadeTime": {
+							"type": "float32",
+							"value": 0
+						},
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -388,7 +472,10 @@
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": { "type": "float32", "value": 1 },
+						"m_fFadeTime": {
+							"type": "float32",
+							"value": 1
+						},
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -429,7 +516,9 @@
 						}
 					},
 					"events": {
-						"Data": { "MainColours": ["cafef77f80f5f691"] }
+						"Data": {
+							"MainColours": ["cafef77f80f5f691"]
+						}
 					}
 				}
 			]
@@ -487,13 +576,13 @@
 					"factory": "[modules:/zhm5hitmanhealthmodifier.class].pc_entitytype",
 					"blueprint": "[modules:/zhm5hitmanhealthmodifier.class].pc_entityblueprint",
 					"events": {
-						"OnHandleBreakRecorder": {
+						"OnHeroEnterCover": {
 							"SetTextHealth": [
 								{
 									"ref": "cafef77f80f5f691",
 									"value": {
 										"type": "float32",
-										"value": 1
+										"value": 0
 									}
 								}
 							],
@@ -502,7 +591,7 @@
 									"ref": "cafef77f80f5f691",
 									"value": {
 										"type": "float32",
-										"value": 1
+										"value": 0
 									}
 								}
 							]
