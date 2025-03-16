@@ -6,4 +6,4 @@ SWF Integration Testing
 
 ---
 
-`meimei.swfintegration` v1.1.1, by Mei-Mei. This README was automatically generated from the mod's manifest.
+`meimei.swfintegration` v1.1.2, by Mei-Mei. This README was automatically generated from the mod's manifest.
