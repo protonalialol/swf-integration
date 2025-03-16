@@ -14,7 +14,7 @@
 			"flag": "1F"
 		},
 		{
-			"hash": "[assembly:/ui/controls/HealthBar.swf?/common.BaseControl.uic].pc_entityblueprint",
+			"hash": "[assembly:/ui/controls/RatingBar.swf?/common.BaseControl.uic].pc_entityblueprint",
 			"flag": "1F"
 		}
 	]
