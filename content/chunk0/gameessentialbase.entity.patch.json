@@ -19,8 +19,8 @@
 				{
 					"parent": "cafe9febbac2a828",
 					"name": "test",
-					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/Bar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
-					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/Bar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
+					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
+					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
 					"properties": {
 						"m_pMovieResource": {
 							"type": "ZRuntimeResourceID",
@@ -35,7 +35,7 @@
 						},
 						"m_vPositionOffset": {
 							"type": "SVector3",
-							"value": { "x": 15, "y": 600, "z": 0 }
+							"value": { "x": 15, "y": 829, "z": 0 }
 						},
 						"m_eAlignmentType": {
 							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
