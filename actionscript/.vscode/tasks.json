@@ -6,7 +6,7 @@
 		{
 			"label": "Compile release and export using G2GFxDataTool",
 			"type": "shell",
-			"command": "D:\\User\\Documents\\Hitman\\tools\\G2GFxDataTool\\G2GFxDataTool.exe -i bin\\HealthBar.swf -o ..\\content\\chunk0\\scaleform\\",
+			"command": "D:\\User\\Documents\\Hitman\\tools\\G2GFxDataTool\\G2GFxDataTool.exe -i bin\\RatingBar.swf -o ..\\content\\chunk0\\scaleform\\",
 			"dependsOn": ["ActionScript: compile release - asconfig.json"],
 			"problemMatcher": [],
 			"group": {

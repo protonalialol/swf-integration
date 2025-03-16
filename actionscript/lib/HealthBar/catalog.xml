@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flash version="24.0" build="d19" platform="WIN" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="HealthBarView" mod="1720272956534" >
+        <def id="HealthBarView" /> 
+        <dep id="flash.text:TextField" type="s" /> 
+        <dep id="flash.display:MovieClip" type="i" /> 
+        <dep id="AS3" type="n" /> 
+      </script>
+      <script name="HealthBar_xfl_fla/HealthBarInner_4" mod="1720272956534" >
+        <def id="HealthBar_xfl_fla:HealthBarInner_4" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.display:MovieClip" type="i" /> 
+        <dep id="AS3" type="n" /> 
+      </script>
+      <script name="privatePkg/___LayerProp___" mod="1720272956543" >
+        <def id="privatePkg:___LayerProp___" /> 
+        <dep id="flash.geom:Matrix" type="s" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.geom:ColorTransform" type="e" /> 
+        <dep id="flash.geom:Matrix" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.display:MovieClip" type="i" /> 
+        <dep id="AS3" type="n" /> 
+      </script>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

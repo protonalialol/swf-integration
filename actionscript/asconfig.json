@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"source-path": ["src"],
 		"library-path": ["lib"],
-		"output": "bin/HealthBar.swf"
+		"output": "bin/RatingBar.swf"
 	},
 	"mainClass": "Main"
 }

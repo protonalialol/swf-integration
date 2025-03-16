@@ -86,7 +86,7 @@
 				"ff4672d7da2e8b02",
 				{
 					"AddProperty": [
-						"HealthBar",
+						"RatingBar",
 						{
 							"type": "SEntityTemplateReference",
 							"value": "cafef4e298a79304"
@@ -100,7 +100,7 @@
 				"ff4672d7da2e8b02",
 				{
 					"AddPropertyAliasConnection": [
-						"HealthBar",
+						"RatingBar",
 						{
 							"originalProperty": "m_pTargetControl",
 							"originalEntity": "cafe353bf2365fa9"
@@ -114,7 +114,7 @@
 				"cafeba446945a84b",
 				{
 					"parent": "6933599ccecbd1ed",
-					"name": "HealthBar",
+					"name": "RatingBar",
 					"factory": "[modules:/zentity.class].pc_entitytype",
 					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 				}
@@ -125,20 +125,20 @@
 				"cafef77f80f5f691",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "HealthBar",
-					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
-					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
+					"name": "RatingBar",
+					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
+					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
 					"properties": {
 						"m_pMovieResource": {
 							"type": "ZRuntimeResourceID",
 							"value": {
-								"resource": "[assembly:/ui/controls/HealthBar.swf].pc_swf",
+								"resource": "[assembly:/ui/controls/RatingBar.swf].pc_swf",
 								"flag": "5F"
 							}
 						},
 						"m_sClassName": {
 							"type": "ZString",
-							"value": "healthbar.HealthBar"
+							"value": "ratingbar.RatingBar"
 						},
 						"m_vPositionOffset": {
 							"type": "SVector3",
@@ -273,7 +273,7 @@
 					"properties": {
 						"m_sName": {
 							"type": "ZString",
-							"value": "EventChannel_Notex_HealthBar"
+							"value": "EventChannel_Notex_RatingBar"
 						}
 					}
 				}
@@ -284,7 +284,7 @@
 				"cafe353bf2365fa9",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "HealthBarVisibilityController_Instant",
+					"name": "RatingBarVisibilityController_Instant",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
@@ -305,7 +305,7 @@
 				"cafe0141885e38a0",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "HealthBarVisibilityController_Fade",
+					"name": "RatingBarVisibilityController_Fade",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
@@ -326,7 +326,7 @@
 				"cafef4e298a79304",
 				{
 					"parent": "ff4672d7da2e8b02",
-					"name": "HealthBar",
+					"name": "RatingBar",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
@@ -349,7 +349,7 @@
 					"properties": {
 						"m_pJSONResource": {
 							"type": "ZRuntimeResourceID",
-							"value": "[assembly:/ui/data/healthbar/colours_main.json].pc_json"
+							"value": "[assembly:/ui/data/ratingbar/colours_main.json].pc_json"
 						}
 					},
 					"events": {
@@ -371,7 +371,7 @@
 					"properties": {
 						"m_pJSONResource": {
 							"type": "ZRuntimeResourceID",
-							"value": "[assembly:/ui/data/healthbar/colours_secondary.json].pc_json"
+							"value": "[assembly:/ui/data/ratingbar/colours_secondary.json].pc_json"
 						}
 					},
 					"events": {
