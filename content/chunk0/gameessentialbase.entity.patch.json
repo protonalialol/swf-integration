@@ -1,0 +1,64 @@
+{
+	"tempHash": "0093B7139387B988",
+	"tbluHash": "004D99E9BEC3EA51",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe9febbac2a828",
+				{
+					"parent": "6933599ccecbd1ed",
+					"name": "Bar",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe49df369f7c04",
+				{
+					"parent": "cafe9febbac2a828",
+					"name": "test",
+					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/Bar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
+					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/Bar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
+					"properties": {
+						"m_pMovieResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/ui/controls/HealthBar.swf].pc_swf",
+								"flag": "5F"
+							}
+						},
+						"m_sClassName": {
+							"type": "ZString",
+							"value": "healthbar.HealthBar"
+						},
+						"m_vPositionOffset": {
+							"type": "SVector3",
+							"value": { "x": 15, "y": 600, "z": 0 }
+						},
+						"m_eAlignmentType": {
+							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
+							"value": "E_ALIGNMENT_TYPE_BottomLeft"
+						},
+						"m_eSizeMode": {
+							"type": "ZUIControlLayoutLegacyAspect.ELayoutMode",
+							"value": "E_LAYOUT_MODE_Proportional_Scale_MaintainAspect"
+						},
+						"m_vSize": {
+							"type": "SVector2",
+							"value": { "x": 100, "y": 100 }
+						},
+						"m_bIsVisible": { "type": "bool", "value": true },
+						"m_fAlpha": { "type": "float32", "value": 100.0 },
+						"Debug": { "type": "uint32", "value": 100 },
+						"DebugMode": { "type": "bool", "value": false },
+						"Height": { "type": "float32", "value": 1 },
+						"Width": { "type": "float32", "value": 1 }
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"source-path": [
+			"src"
+		],
+		"library-path": [
+			"lib"
+		],
+		"output": "bin/Bar.swf"
+	},
+	"mainClass": "Main"
+}
