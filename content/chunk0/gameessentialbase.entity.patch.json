@@ -142,11 +142,7 @@
 						},
 						"m_vPositionOffset": {
 							"type": "SVector3",
-							"value": {
-								"x": 15,
-								"y": 700,
-								"z": 0
-							}
+							"value": { "x": 15, "y": 700, "z": 0 }
 						},
 						"m_eAlignmentType": {
 							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
@@ -158,35 +154,14 @@
 						},
 						"m_vSize": {
 							"type": "SVector2",
-							"value": {
-								"x": 100,
-								"y": 100
-							}
+							"value": { "x": 100, "y": 100 }
 						},
-						"m_bIsVisible": {
-							"type": "bool",
-							"value": true
-						},
-						"m_fAlpha": {
-							"type": "float32",
-							"value": 100.0
-						},
-						"Debug": {
-							"type": "uint32",
-							"value": 100
-						},
-						"DebugMode": {
-							"type": "bool",
-							"value": false
-						},
-						"Height": {
-							"type": "float32",
-							"value": 1
-						},
-						"Width": {
-							"type": "float32",
-							"value": 1
-						}
+						"m_bIsVisible": { "type": "bool", "value": true },
+						"m_fAlpha": { "type": "float32", "value": 100.0 },
+						"Debug": { "type": "uint32", "value": 100 },
+						"DebugMode": { "type": "bool", "value": false },
+						"Height": { "type": "float32", "value": 1 },
+						"Width": { "type": "float32", "value": 1 }
 					},
 					"events": {
 						"RequestData": {
@@ -242,22 +217,15 @@
 					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entityblueprint",
 					"properties": {
-						"m_bEnabled": {
-							"type": "bool",
-							"value": true
-						},
+						"m_bEnabled": { "type": "bool", "value": true },
 						"m_rChannelToken": {
 							"type": "SEntityTemplateReference",
 							"value": "cafe8b035c1e15db"
 						}
 					},
 					"events": {
-						"OnTrue": {
-							"Hide": ["cafe353bf2365fa9"]
-						},
-						"OnFalse": {
-							"Show": ["cafe353bf2365fa9"]
-						}
+						"OnTrue": { "Hide": ["cafe353bf2365fa9"] },
+						"OnFalse": { "Show": ["cafe353bf2365fa9"] }
 					}
 				}
 			]
@@ -273,7 +241,7 @@
 					"properties": {
 						"m_sName": {
 							"type": "ZString",
-							"value": "EventChannel_Notex_RatingBar"
+							"value": "EventChannel_Notex_HealthBar"
 						}
 					}
 				}
@@ -288,10 +256,7 @@
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": {
-							"type": "float32",
-							"value": 0
-						},
+						"m_fFadeTime": { "type": "float32", "value": 0 },
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -309,10 +274,7 @@
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": {
-							"type": "float32",
-							"value": 1
-						},
+						"m_fFadeTime": { "type": "float32", "value": 1 },
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -353,9 +315,7 @@
 						}
 					},
 					"events": {
-						"Data": {
-							"MainColours": ["cafef77f80f5f691"]
-						}
+						"Data": { "MainColours": ["cafef77f80f5f691"] }
 					}
 				}
 			]
@@ -417,6 +377,17 @@
 							"SetBarHealth": ["cafef77f80f5f691"]
 						}
 					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeefe24e8fd7c6",
+				{
+					"parent": "cafeba446945a84b",
+					"name": "test123",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 				}
 			]
 		}
