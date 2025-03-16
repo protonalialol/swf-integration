@@ -4,9 +4,39 @@
 	"patch": [
 		{
 			"SubEntityOperation": [
+				"22d3b3245663530a",
+				{
+					"AddProperty": ["m_bValue", { "type": "bool", "value": false }]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"79f2d49aa3ababb2",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_vSize",
+						"value": { "x": 110.0, "y": 100.0 }
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
 				"8e16e03dab8d2cef",
 				{
 					"AddEventConnection": ["EventReceived", "SetVisible", "cafe0141885e38a0"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"cf7683d2d628f18b",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_eAlignment",
+						"value": "StretchHorizontalTop"
+					}
 				}
 			]
 		},
@@ -51,9 +81,66 @@
 		},
 		{
 			"SubEntityOperation": [
+				"24510c06d411d27e",
+				{
+					"AddProperty": ["m_bValue", { "type": "bool", "value": false }]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
 				"43f4c2bb1b13db7b",
 				{
 					"AddEventConnection": ["Out02", "Show", "cafef4e298a79304"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0e6b987334fb32d8",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_eAlignmentType",
+						"value": "E_ALIGNMENT_TYPE_TopCenter"
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0e6b987334fb32d8",
+				{
+					"AddProperty": ["m_bIsVisible", { "type": "bool", "value": true }]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0e6b987334fb32d8",
+				{
+					"AddProperty": ["m_fAlpha", { "type": "float32", "value": 100.0 }]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0e6b987334fb32d8",
+				{
+					"AddProperty": [
+						"m_vPositionOffset",
+						{
+							"type": "SVector3",
+							"value": { "x": 0.0, "y": -10.0, "z": 0.0 }
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0e6b987334fb32d8",
+				{
+					"AddProperty": ["m_bForwardDataToChildren", { "type": "bool", "value": false }]
 				}
 			]
 		},
@@ -75,6 +162,33 @@
 		},
 		{
 			"SubEntityOperation": [
+				"673f62c9f62d70e0",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_eOption",
+						"value": "UI_OPTION_GAME_TRIGGER_SHOOT"
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ff4d314f742afb4a",
+				{
+					"AddProperty": ["m_bValue", { "type": "bool", "value": false }]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"1540a46df9c4cdb9",
+				{
+					"AddProperty": ["m_bIsVisible", { "type": "bool", "value": false }]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
 				"69be349a738c7ea9",
 				{
 					"AddEventConnection": ["EventReceived", "SetVisible", "cafe353bf2365fa9"]
@@ -86,7 +200,7 @@
 				"ff4672d7da2e8b02",
 				{
 					"AddProperty": [
-						"HealthBar",
+						"RatingBar",
 						{
 							"type": "SEntityTemplateReference",
 							"value": "cafef4e298a79304"
@@ -100,7 +214,7 @@
 				"ff4672d7da2e8b02",
 				{
 					"AddPropertyAliasConnection": [
-						"HealthBar",
+						"RatingBar",
 						{
 							"originalProperty": "m_pTargetControl",
 							"originalEntity": "cafe353bf2365fa9"
@@ -114,7 +228,7 @@
 				"cafeba446945a84b",
 				{
 					"parent": "6933599ccecbd1ed",
-					"name": "HealthBar",
+					"name": "RatingBar",
 					"factory": "[modules:/zentity.class].pc_entitytype",
 					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 				}
@@ -125,28 +239,24 @@
 				"cafef77f80f5f691",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "HealthBar",
-					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
-					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/HealthBar.swf?/healthbar.HealthBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
+					"name": "RatingBar",
+					"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entitytype",
+					"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/ui/controls/RatingBar.swf?/ratingbar.RatingBar.uic].entitytype,[modules:/zuicontrollayoutlegacyaspect.class].entitytype).pc_entityblueprint",
 					"properties": {
 						"m_pMovieResource": {
 							"type": "ZRuntimeResourceID",
 							"value": {
-								"resource": "[assembly:/ui/controls/HealthBar.swf].pc_swf",
+								"resource": "[assembly:/ui/controls/RatingBar.swf].pc_swf",
 								"flag": "5F"
 							}
 						},
 						"m_sClassName": {
 							"type": "ZString",
-							"value": "healthbar.HealthBar"
+							"value": "ratingbar.RatingBar"
 						},
 						"m_vPositionOffset": {
 							"type": "SVector3",
-							"value": {
-								"x": 15,
-								"y": 700,
-								"z": 0
-							}
+							"value": { "x": 15, "y": 700, "z": 0 }
 						},
 						"m_eAlignmentType": {
 							"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
@@ -158,35 +268,14 @@
 						},
 						"m_vSize": {
 							"type": "SVector2",
-							"value": {
-								"x": 100,
-								"y": 100
-							}
+							"value": { "x": 100, "y": 100 }
 						},
-						"m_bIsVisible": {
-							"type": "bool",
-							"value": true
-						},
-						"m_fAlpha": {
-							"type": "float32",
-							"value": 100.0
-						},
-						"Debug": {
-							"type": "uint32",
-							"value": 100
-						},
-						"DebugMode": {
-							"type": "bool",
-							"value": false
-						},
-						"Height": {
-							"type": "float32",
-							"value": 1
-						},
-						"Width": {
-							"type": "float32",
-							"value": 1
-						}
+						"m_bIsVisible": { "type": "bool", "value": true },
+						"m_fAlpha": { "type": "float32", "value": 100.0 },
+						"Debug": { "type": "uint32", "value": 100 },
+						"DebugMode": { "type": "bool", "value": false },
+						"Height": { "type": "float32", "value": 1 },
+						"Width": { "type": "float32", "value": 1 }
 					},
 					"events": {
 						"RequestData": {
@@ -242,22 +331,15 @@
 					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_bool.entitytemplate].pc_entityblueprint",
 					"properties": {
-						"m_bEnabled": {
-							"type": "bool",
-							"value": true
-						},
+						"m_bEnabled": { "type": "bool", "value": true },
 						"m_rChannelToken": {
 							"type": "SEntityTemplateReference",
 							"value": "cafe8b035c1e15db"
 						}
 					},
 					"events": {
-						"OnTrue": {
-							"Hide": ["cafe353bf2365fa9"]
-						},
-						"OnFalse": {
-							"Show": ["cafe353bf2365fa9"]
-						}
+						"OnTrue": { "Hide": ["cafe353bf2365fa9"] },
+						"OnFalse": { "Show": ["cafe353bf2365fa9"] }
 					}
 				}
 			]
@@ -284,14 +366,11 @@
 				"cafe353bf2365fa9",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "HealthBarVisibilityController_Instant",
+					"name": "RatingBarVisibilityController_Instant",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": {
-							"type": "float32",
-							"value": 0
-						},
+						"m_fFadeTime": { "type": "float32", "value": 0 },
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -305,14 +384,11 @@
 				"cafe0141885e38a0",
 				{
 					"parent": "cafeba446945a84b",
-					"name": "HealthBarVisibilityController_Fade",
+					"name": "RatingBarVisibilityController_Fade",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
-						"m_fFadeTime": {
-							"type": "float32",
-							"value": 1
-						},
+						"m_fFadeTime": { "type": "float32", "value": 1 },
 						"m_pTargetControl": {
 							"type": "SEntityTemplateReference",
 							"value": "cafef77f80f5f691"
@@ -326,7 +402,7 @@
 				"cafef4e298a79304",
 				{
 					"parent": "ff4672d7da2e8b02",
-					"name": "HealthBar",
+					"name": "RatingBar",
 					"factory": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entitytype",
 					"blueprint": "[modules:/zuicontrolvisibilitycontrollerentity.class].pc_entityblueprint",
 					"properties": {
@@ -349,13 +425,11 @@
 					"properties": {
 						"m_pJSONResource": {
 							"type": "ZRuntimeResourceID",
-							"value": "[assembly:/ui/data/healthbar/colours_main.json].pc_json"
+							"value": "[assembly:/ui/data/ratingbar/colours_main.json].pc_json"
 						}
 					},
 					"events": {
-						"Data": {
-							"MainColours": ["cafef77f80f5f691"]
-						}
+						"Data": { "MainColours": ["cafef77f80f5f691"] }
 					}
 				}
 			]
@@ -371,7 +445,7 @@
 					"properties": {
 						"m_pJSONResource": {
 							"type": "ZRuntimeResourceID",
-							"value": "[assembly:/ui/data/healthbar/colours_secondary.json].pc_json"
+							"value": "[assembly:/ui/data/ratingbar/colours_secondary.json].pc_json"
 						}
 					},
 					"events": {
@@ -413,21 +487,27 @@
 					"factory": "[modules:/zhm5hitmanhealthmodifier.class].pc_entitytype",
 					"blueprint": "[modules:/zhm5hitmanhealthmodifier.class].pc_entityblueprint",
 					"events": {
-						"OnGetHealth": {
-							"SetBarHealth": ["cafef77f80f5f691"]
+						"OnHandleBreakRecorder": {
+							"SetTextHealth": [
+								{
+									"ref": "cafef77f80f5f691",
+									"value": {
+										"type": "float32",
+										"value": 1
+									}
+								}
+							],
+							"SetBarHealth": [
+								{
+									"ref": "cafef77f80f5f691",
+									"value": {
+										"type": "float32",
+										"value": 1
+									}
+								}
+							]
 						}
 					}
-				}
-			]
-		},
-		{
-			"AddEntity": [
-				"cafeefe24e8fd7c6",
-				{
-					"parent": "cafeba446945a84b",
-					"name": "test123",
-					"factory": "[modules:/zentity.class].pc_entitytype",
-					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 				}
 			]
 		}
